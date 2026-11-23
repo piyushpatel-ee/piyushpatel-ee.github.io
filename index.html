@@ -1,1 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Piyush Patel | Electrical Engineering</title>
+
+    <meta name="description"
+          content="Piyush Patel — Electrical Engineering student interested in electronics, control systems and technology.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b0f14;
+            color: #e8edf2;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* NAVBAR */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(11, 15, 20, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #202832;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #4da3ff;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #aeb8c4;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #4da3ff;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 120px 10% 80px;
+            background:
+                radial-gradient(circle at 80% 30%, #12304c 0%, transparent 30%),
+                #0b0f14;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hello {
+            color: #4da3ff;
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+
+        .hero h1 {
+            font-size: clamp(45px, 8vw, 80px);
+            line-height: 1.05;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #4da3ff;
+        }
+
+        .hero h2 {
+            font-size: clamp(22px, 4vw, 34px);
+            color: #aeb8c4;
+            font-weight: 400;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            max-width: 650px;
+            color: #8895a3;
+            font-size: 18px;
+            margin-bottom: 35px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            padding: 12px 22px;
+            border: 1px solid #4da3ff;
+            border-radius: 8px;
+            color: #4da3ff;
+            transition: 0.3s;
+        }
+
+        .button.primary {
+            background: #4da3ff;
+            color: #071019;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(77, 163, 255, 0.18);
+        }
+
+        /* GENERAL */
+        section {
+            padding: 90px 10%;
+        }
+
+        .section-title {
+            font-size: 35px;
+            margin-bottom: 40px;
+        }
+
+        .section-title span {
+            color: #4da3ff;
+        }
+
+        .about-text {
+            max-width: 800px;
+            color: #aeb8c4;
+            font-size: 18px;
+        }
+
+        /* SKILLS */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            padding: 10px 16px;
+            border: 1px solid #293441;
+            border-radius: 30px;
+            color: #b8c3ce;
+            background: #111820;
+        }
+
+        /* PROJECTS */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 22px;
+        }
+
+        .project-card {
+            background: #111820;
+            border: 1px solid #202c38;
+            border-radius: 14px;
+            padding: 28px;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+            border-color: #4da3ff;
+        }
+
+        .project-card h3 {
+            margin-bottom: 12px;
+        }
+
+        .project-card p {
+            color: #8f9ba8;
+        }
+
+        .project-tag {
+            display: inline-block;
+            margin-top: 18px;
+            color: #4da3ff;
+            font-size: 14px;
+        }
+
+        /* CONTACT */
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            color: #8f9ba8;
+            margin-bottom: 25px;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid #202832;
+            color: #687583;
+        }
+
+        /* MOBILE */
+        @media (max-width: 700px) {
+            nav {
+                padding: 16px 5%;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding-left: 7%;
+                padding-right: 7%;
+            }
+
+            section {
+                padding: 70px 7%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="logo">Piyush<span>.</span></div>
+
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+
+            <div class="hello">Hello, I'm</div>
+
+            <h1>Piyush <span>Patel</span></h1>
+
+            <h2>Electrical Engineering Student</h2>
+
+            <p>
+                I am interested in electrical engineering, electronics,
+                control systems and building things that turn ideas into
+                working systems.
+            </p>
+
+            <div class="buttons">
+                <a class="button primary" href="#projects">
+                    View My Projects
+                </a>
+
+                <a class="button"
+                   href="https://github.com/piyushpatel-ee"
+                   target="_blank">
+                    GitHub
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about">
+
+        <h2 class="section-title">
+            About <span>Me</span>
+        </h2>
+
+        <p class="about-text">
+            I am an Electrical Engineering student exploring electronics,
+            control systems, programming and embedded systems. I enjoy
+            understanding how systems work and applying engineering concepts
+            to practical projects.
+        </p>
+
+    </section>
+
+
+    <!-- SKILLS -->
+    <section id="skills">
+
+        <h2 class="section-title">
+            My <span>Skills</span>
+        </h2>
+
+        <div class="skills">
+
+            <div class="skill">Electrical Engineering</div>
+            <div class="skill">Control Systems</div>
+            <div class="skill">Electronics</div>
+            <div class="skill">Embedded Systems</div>
+            <div class="skill">ESP32</div>
+            <div class="skill">Python</div>
+            <div class="skill">C / C++</div>
+            <div class="skill">Git & GitHub</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+    <section id="projects">
+
+        <h2 class="section-title">
+            Featured <span>Projects</span>
+        </h2>
+
+        <div class="projects">
+
+            <div class="project-card">
+
+                <h3>Two-Wheeled Self-Balancing Robot</h3>
+
+                <p>
+                    A two-wheeled self-balancing system based on an
+                    ESP32, MPU6050 IMU and DC geared motors.
+                    The project explores feedback control, sensor
+                    measurement and motor control.
+                </p>
+
+                <span class="project-tag">
+                    Control Systems · Embedded · Electronics
+                </span>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <h3>More Projects Coming</h3>
+
+                <p>
+                    This portfolio will be updated as I build and
+                    document more electrical, electronics and
+                    control-system projects.
+                </p>
+
+                <span class="project-tag">
+                    In Progress
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+
+        <h2 class="section-title">
+            Let's <span>Connect</span>
+        </h2>
+
+        <p>
+            Interested in my work or want to discuss a project?
+        </p>
+
+        <a class="button primary"
+           href="https://github.com/piyushpatel-ee"
+           target="_blank">
+            Visit My GitHub
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        © 2026 Piyush Patel · Electrical Engineering
+    </footer>
+
+</body>
+</html>
